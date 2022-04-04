@@ -4,4 +4,6 @@ class Hello extends React.Component {
   }
 }
 
-ReactDOM.render(<Hello />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<Hello />);
