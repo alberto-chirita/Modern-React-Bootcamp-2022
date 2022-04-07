@@ -1,2 +1,32 @@
 .Pokedex {
+  background: lightsteelblue;
+  text-align: center;
+  padding: 1em 0;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.Pokedex-title {
+  color: white;
+}
+
+.Pokedex-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.Pokedex-game {
+  /* background: white; */
+  padding: 0.1em 0;
+}
+
+.Pokedex-winner {
+  font-weight: bold;
+  color: seagreen;
+}
+
+.Pokedex-loser {
+  font-weight: bold;
+  color: crimson;
 }

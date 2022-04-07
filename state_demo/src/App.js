@@ -1,10 +1,11 @@
-import Pokegame from "./Pokegame";
+import Game from "./Game";
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Pokegame />
+      <Game />
     </div>
   );
 }

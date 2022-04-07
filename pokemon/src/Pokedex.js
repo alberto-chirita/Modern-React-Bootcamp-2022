@@ -2,19 +2,32 @@ import Pokecard from "./Pokecard";
 import "./Pokedex.css";
 
 function Pokedex(props) {
-  const { pokemons } = props;
+  const { pokemons, exp, isWinner } = props;
+
+  let message = null;
+  if (isWinner) {
+    message = <h1 className="Pokedex-winner">Winning Hand</h1>;
+  } else {
+    message = <h1 className="Pokedex-loser">Losing Hand</h1>;
+  }
 
   return (
     <div className="Pokedex">
+      <h1 className="Pokedex-title">Pokedex</h1>
       <div className="Pokedex-cards">
-        {pokemons.map((pokemon, key) => (
+        {pokemons.map((pokemon) => (
           <Pokecard
-            key={pokemon.id.toString()}
+            key={pokemon.id}
+            id={pokemon.id}
             name={pokemon.name}
             type={pokemon.type}
             exp={pokemon.base_experience}
           />
         ))}
+      </div>
+      <div className="Pokedex-game">
+        {message}
+        <h3>Total experience: {exp}</h3>
       </div>
     </div>
   );
