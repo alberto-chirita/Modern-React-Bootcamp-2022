@@ -1,10 +1,10 @@
-import BrokenClick from "./BrokenClick";
+import RollDice from "./RollDice";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <BrokenClick />
+      <RollDice />
     </div>
   );
 }
