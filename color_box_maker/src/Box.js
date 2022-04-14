@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 export class Box extends Component {
   handleClick = () => {
-    alert("Remove The Box!");
+    this.props.removeBox(this.props.id);
   };
 
   render() {
     const style = {
-      height: this.props.height,
-      width: this.props.width,
+      height: `${this.props.height}em`,
+      width: `${this.props.width}em`,
       backgroundColor: this.props.backgroundColor,
     };
 
