@@ -18,6 +18,12 @@ export class TodoList extends Component {
     this.setState({ todos: [...this.state.todos, newTodo] });
   };
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log("IN COMPONENT DID UPDATE");
+  //   console.log(prevState.todos);
+  //   console.log(this.state.todos);
+  // }
+
   updateTodo = (id, updatedTask) => {
     const updatedTodos = this.state.todos.map((todo) =>
       todo.id === id ? { ...todo, task: updatedTask } : todo

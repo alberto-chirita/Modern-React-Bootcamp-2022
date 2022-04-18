@@ -7,6 +7,16 @@ export class Todo extends Component {
     this.state = { task: this.props.task, isEditing: false };
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log("TODO COMPONENT DID UPDATE!");
+  //   console.log(prevProps.task);
+  //   console.log(this.props.task);
+  // }
+
+  componentWillUnmount() {
+    console.log("IN COMPONENT WILL UNMOUNT!");
+  }
+
   handleUpdate = (evt) => {
     evt.preventDefault();
     this.props.updateTodo(this.props.id, this.state.task);
