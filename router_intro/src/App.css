@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.active-link {
+  color: pink;
+  border-bottom: 1px solid red;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
