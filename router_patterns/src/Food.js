@@ -2,13 +2,13 @@ import { useParams } from "react-router-dom";
 import "./Food.css";
 
 function Food() {
-  const { name } = useParams();
-  // const foodUrl = `https://source.unsplash.com/1600x900/?${name}`;
+  const { foodName } = useParams();
+  const foodUrl = `https://source.unsplash.com/1600x900/?${foodName}`;
 
   return (
     <div className="Food">
-      {/* <h1>I love to eat {name}</h1>
-      <img src={foodUrl} alt={name} /> */}
+      <h1>I love to eat {foodName}</h1>
+      <img src={foodUrl} alt={foodName} />
     </div>
   );
 }
