@@ -36,10 +36,11 @@
 // export default FoodSearch;
 
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 function FoodSearch() {
   const [query, setQuery] = useState("");
+  let navigate = useNavigate();
 
   const handleChange = (ev) => {
     setQuery(ev.target.value);
@@ -48,8 +49,9 @@ function FoodSearch() {
   const handleClick = () => {
     //Do something
     alert("SAVED YOUR FOOD TO DB!");
-    //     //redirect somewhere else
-    //     this.props.history.push(`/food/${this.state.query}`);
+
+    //redirect somewhere else
+    navigate(`/food/${query}`);
   };
 
   return (
@@ -62,7 +64,7 @@ function FoodSearch() {
         onChange={handleChange}
       />
       <Link to={`/food/${query}`}>Go!</Link>
-      <button onClick={handleClick}>Search</button>
+      <button onClick={handleClick}>Save New Food!</button>
       <Outlet />
     </div>
   );
