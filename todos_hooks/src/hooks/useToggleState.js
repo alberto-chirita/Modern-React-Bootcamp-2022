@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function useToggle(initialVal = false) {
+function useToggleState(initialVal = false) {
   // call useState, "reverse piece of state"
   const [state, setState] = useState(initialVal);
 
@@ -12,4 +12,4 @@ function useToggle(initialVal = false) {
   return [state, toggle];
 }
 
-export default useToggle;
+export default useToggleState;
