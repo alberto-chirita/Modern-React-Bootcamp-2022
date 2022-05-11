@@ -5,7 +5,6 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Switch from "@mui/material/Switch";
-import { withStyles } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./styles/NavBarStyles";
 
@@ -34,4 +33,4 @@ function Navbar(props) {
   );
 }
 
-export default withStyles(styles)(Navbar);
+export default Navbar;
